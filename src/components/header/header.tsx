@@ -22,6 +22,7 @@ const Header: React.FC = () => {
     <div
       style={{
         backgroundColor: "#222222",
+        display: "flex",
         height: "100%",
         flexDirection: "column",
         alignItems: "center",
