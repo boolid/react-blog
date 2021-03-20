@@ -1,0 +1,36 @@
+.about-me-card {
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+
+.about-me-background-picture {
+  height: 15rem;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background-position: bottom center;
+  background-size: cover;
+}
+
+.about-me-profile-picture {
+  background-position: center center;
+  background-size: 10rem;
+  height: 10rem;
+  width: 10rem;
+  border-radius: 50%;
+  align-self: center;
+  margin-top: -5rem;
+}
+
+.about-me-details {
+  padding: 1rem;
+  width: 20rem;
+  align-self: center;
+}
+
+/* Small Screen */
+@media only screen and (max-width: 768px) {
+  .about-me-details {
+    width: 80%;
+  }
+}

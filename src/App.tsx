@@ -1,14 +1,38 @@
 import React from "react";
-import logo from "./logo.svg";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+
+// CSS
 import "./App.css";
-import Header from "./components/header/header";
+
+// Components
+import NavBar from "./components/navbar/navbar";
+import { NavigationConfig } from "./config/navigation";
+
+// Pages
+import Home from "./pages/Home";
+import Project from "./pages/Projects";
+import AboutMe from "./pages/AboutMe";
 
 function App() {
   return (
-    <div style={{ display: "flex", height: "100vh" }}>
-      <Header />
-      <div style={{ display: "flex" }}>AJSKDBAKSJDBKJ</div>
-    </div>
+    <BrowserRouter>
+      <div>
+        <NavBar logoName="boolid" items={NavigationConfig} />
+        <main>
+          <Switch>
+            <Route path="/projects">
+              <Project />
+            </Route>
+            <Route path="/about-me">
+              <AboutMe />
+            </Route>
+            <Route path="/">
+              <Home />
+            </Route>
+          </Switch>
+        </main>
+      </div>
+    </BrowserRouter>
   );
 }
 
