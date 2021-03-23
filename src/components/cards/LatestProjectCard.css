@@ -50,7 +50,7 @@
   display: flex;
   flex-direction: row;
   justify-content: right;
-  align-items: end;
+  align-items: flex-end;
 }
 
 .latest-project-action svg {

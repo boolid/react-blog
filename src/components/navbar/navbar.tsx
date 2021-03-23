@@ -32,9 +32,9 @@ const Navbar: React.FC<INavbar> = ({ logoName, items }) => {
             <span className="link-text logo-text"> {logoName} </span>
           </Link>
         </li>
-        {items.map((item) => {
+        {items.map((item, index) => {
           return (
-            <li className="nav-item">
+            <li key={index} className="nav-item">
               <Link
                 className="nav-link"
                 to={item.link ? item.link : "#"}

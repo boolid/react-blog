@@ -10,8 +10,11 @@ import { NavigationConfig } from "./config/navigation";
 
 // Pages
 import Home from "./pages/Home";
-import Project from "./pages/Projects";
+import Projects from "./pages/Projects";
 import AboutMe from "./pages/AboutMe";
+import Project from "./pages/Project";
+
+import { projects } from "./config/project";
 
 function App() {
   return (
@@ -21,10 +24,13 @@ function App() {
         <main>
           <Switch>
             <Route path="/projects">
-              <Project />
+              <Projects projects={projects} />
             </Route>
             <Route path="/about-me">
               <AboutMe />
+            </Route>
+            <Route path="/project/:id">
+              <Project />
             </Route>
             <Route path="/">
               <Home />

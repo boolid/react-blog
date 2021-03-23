@@ -1,6 +1,5 @@
 import React, { CSSProperties } from "react";
 import { Comment, Heart } from "../icons";
-import { cardStyle } from "./cardStyle";
 
 import "./LatestProjectCard.css";
 import "./default.css";

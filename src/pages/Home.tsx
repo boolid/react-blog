@@ -3,15 +3,10 @@ import LatestProjectCard from "../components/cards/LatestProjectCard";
 import AboutMeCard from "../components/cards/AboutMeCard";
 
 const Home: React.FC = () => {
-  const borderStyle = {
-    border: "1px",
-    borderStyle: "solid",
-    borderColor: "black",
-  };
   return (
     <>
       <div className="banner" style={{ width: "100%" }}>
-        <img src="./images/banner.png" style={{ width: "100%" }} />
+        <img src="./images/banner.png" style={{ width: "100%" }} alt="banner" />
       </div>
       <div
         style={{
