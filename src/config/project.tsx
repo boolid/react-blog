@@ -1,3 +1,7 @@
+import { ReactElement } from "react";
+import BuildWebsite from "../projects/BuildWebsite";
+import Random from "../projects/Random";
+
 interface IComment {
   username: string;
   comment: string;
@@ -7,7 +11,8 @@ export interface IProject {
   id: number;
   backgroundImg: string;
   title: string;
-  content: string;
+  shortDescription: string;
+  content: ReactElement;
   likes: number;
   date: Date;
   comments: IComment[];
@@ -17,10 +22,10 @@ export interface IProject {
 export const projects: IProject[] = [
   {
     id: 1,
-    backgroundImg: "./images/blog.jpeg",
-    title: "How to create a blog",
-    content:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    backgroundImg: "./images/blog1_banner.png",
+    title: "How to build a successful bloggging website in 8 hours using React",
+    shortDescription: `This will hopefully give you guidance on how to build a blogging website quickly. This will not be an easy route to build a blogging website because you can do that with things like WordPress or Wix. That's too easy in my opinion. We need something more challenging. This is exactly why we will be making a website using a popular framework.`,
+    content: <BuildWebsite />,
     likes: 1000,
     date: new Date(),
     comments: [
@@ -38,8 +43,9 @@ export const projects: IProject[] = [
     id: 2,
     backgroundImg: "./images/blog.jpeg",
     title: "How to create a blog",
-    content:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    shortDescription:
+      "This is the short description that will be shown in the project card",
+    content: <Random />,
     likes: 1000,
     date: new Date(),
     comments: [
@@ -57,8 +63,9 @@ export const projects: IProject[] = [
     id: 3,
     backgroundImg: "./images/blog.jpeg",
     title: "How to create a blog",
-    content:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    shortDescription:
+      "This is the short description that will be shown in the project card",
+    content: <Random />,
     likes: 1000,
     date: new Date(),
     comments: [

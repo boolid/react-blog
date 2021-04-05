@@ -1,0 +1,33 @@
+.build-website div {
+  padding: .5rem;
+}
+
+.build-website ul {
+  counter-reset: index;
+  padding: 0;
+  max-width: 300px;
+}
+
+.build-website li {
+  counter-increment: index;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.build-website li::before {
+  content: counters(index, ".", decimal-leading-zero);
+  font-size: 1.5rem;
+  text-align: right;
+  font-weight: bold;
+  min-width: 50px;
+  padding-right: 12px;
+  background-image: linear-gradient(to bottom, aquamarine, orangered);
+  background-attachment: fixed;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+build-website li + li {
+  border-top: 1px solid rgba(255,255,255,0.2);
+}

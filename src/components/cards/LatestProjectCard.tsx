@@ -3,47 +3,41 @@ import { Comment, Heart } from "../icons";
 
 import "./LatestProjectCard.css";
 import "./default.css";
+import { IProject } from "../../config/project";
+import { Link } from "react-router-dom";
 
 interface ILatestProjectCard {
   style?: CSSProperties;
-  img: string;
-  title: string;
-  description: string;
-  comments: number;
-  likes: number;
+  project: IProject;
 }
 
 const LatestProjectCard: React.FC<ILatestProjectCard> = ({
   style,
-  img,
-  title,
-  description,
-  comments,
-  likes,
+  project,
 }) => {
   return (
     <div style={style}>
-      <div className="card latest-project-card">
+      <Link className="card latest-project-card" to={"/project/" + project.id}>
         <div
           className="latest-project-image"
           style={{
-            backgroundImage: `url(${img})`,
+            backgroundImage: `url(${project.backgroundImg})`,
           }}
         />
         <div className="latest-project-detail">
-          <h4>Latest Project</h4>
-          <h2>{title}</h2>
-          <p>{description}</p>
-          <div className="latest-project-action">
-            <div>
-              <Comment /> {comments}
-            </div>
-            <div>
-              <Heart /> {likes}
-            </div>
-          </div>
+          <h4>Check Out the Latest Project!</h4>
+          <h2>{project.title}</h2>
+          <p>{project.shortDescription}</p>
+          {/*<div className="latest-project-action">*/}
+          {/*  <div>*/}
+          {/*    <Comment /> {project.comments.length}*/}
+          {/*  </div>*/}
+          {/*  <div>*/}
+          {/*    <Heart /> {project.likes}*/}
+          {/*  </div>*/}
+          {/*</div>*/}
         </div>
-      </div>
+      </Link>
     </div>
   );
 };

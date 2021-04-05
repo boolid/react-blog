@@ -25,7 +25,8 @@ const Project: React.FC = () => {
             }}
           />
           <h1>{project.title}</h1>
-          <p>{project.content}</p>
+          {/*<div dangerouslySetInnerHTML={{ __html: project.content }} />*/}
+          {project.content}
         </div>
       ) : (
         "Unable to find the project. Are you sure you are in the right page?"

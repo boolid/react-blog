@@ -30,7 +30,7 @@ const ProjectCard: React.FC<IProjectCard> = ({ style, project }) => {
         </div>
         <div className="project-card-detail">
           <h2>{project.title}</h2>
-          <p>{project.content}</p>
+          <p>{project.shortDescription}</p>
         </div>
       </Link>
     </div>
