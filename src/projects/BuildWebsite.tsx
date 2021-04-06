@@ -44,7 +44,77 @@ const Planning: React.FC = () => {
           I'll show you how I plan to build this website. You do not need a
           fancy tool to plan. You just need something to write down. Even a pen
           and paper will do fine. For this blog, I've used a simple online
-          drawing tool (also free!!) called draw.io.
+          drawing tool (also free!!) called{" "}
+          <a href="https://draw.io" target="_blank">
+            draw.io
+          </a>
+          .
+        </div>
+        <div>
+          Check out how I planned for this website:
+          <img
+            style={{ width: "100%" }}
+            src="/images/build-website/planning.png"
+          />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const BreakDownIntoPieces: React.FC = () => {
+  return (
+    <div>
+      <div>
+        Since we have general look for the website, let's dive deeper what needs
+        to be built. This exercise helps how you will structure your web
+        application.
+      </div>
+      <div>
+        <h3>Pages</h3>
+        <div>
+          How many pages do we need to build? What's the page about? How the
+          pages are linked to each other and how will you be able to access the
+          page? For this website, we are building about 4 pages: Home Page,
+          Project List Page, Project Page, and About Me Page.
+        </div>
+        <div>
+          <b style={{ fontSize: "1.3em" }}>Home</b> page will be general page
+          that should give overview of the website. This page will have brief
+          summary about latest project blog and brief summary about me.
+        </div>
+        <div>
+          <b style={{ fontSize: "1.3em" }}>Project List</b> page, as it sounds,
+          should have list of project pages. This page should contain image,
+          date, title and short summary of the project.
+        </div>
+        <div>
+          <b style={{ fontSize: "1.3em" }}>Project</b> page is basic blog page
+          about the project that I'm worked on. Hopefully, I will have a lot of
+          projects.
+        </div>
+        <div>
+          <b style={{ fontSize: "1.3em" }}>About Me</b> page is just description
+          of who I am. I don't think this page is that important but it's
+          something to keep in mind.
+        </div>
+      </div>
+      <div>
+        <h3>Components</h3>
+        <div>
+          I think this might be a react terminology but it's just the building
+          block that can be shared across other pages. I think you will
+          understand as you read along.
+        </div>
+        <div>
+          <b style={{ fontSize: "1.3em" }}>Navigation Bar</b> is the one on the
+          left that helps you to navigate the page.
+        </div>
+        <div>
+          <b style={{ fontSize: "1.3em" }}>Cards</b> are used many places in
+          this website. Home Page uses two cards. One for latest project and one
+          for about me. Project List Page also use bunch of card but they will
+          have the same styling.
         </div>
       </div>
     </div>
@@ -67,6 +137,11 @@ const tableOfContents: TableOfContent[] = [
     id: "planning",
     title: "Planning!",
     content: <Planning />,
+  },
+  {
+    id: "break-down-pieces",
+    title: "Breaking down into pieces",
+    content: <BreakDownIntoPieces />,
   },
 ];
 
