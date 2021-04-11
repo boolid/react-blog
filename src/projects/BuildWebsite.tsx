@@ -68,10 +68,17 @@ const BreakDownIntoPieces: React.FC = () => {
       <div>
         Since we have general look for the website, let's dive deeper what needs
         to be built. This exercise helps how you will structure your web
-        application.
+        application. By the way, if you are interested, you can view all my code
+        in my github page{" "}
+        <a href="https://github.com/boolid/react-blog" target="_blank">
+          here
+        </a>
+        .
       </div>
       <div>
-        <h3>Pages</h3>
+        <a href="https://github.com/boolid/react-blog/tree/main/src/pages">
+          <h3>Pages</h3>
+        </a>
         <div>
           How many pages do we need to build? What's the page about? How the
           pages are linked to each other and how will you be able to access the
@@ -100,7 +107,12 @@ const BreakDownIntoPieces: React.FC = () => {
         </div>
       </div>
       <div>
-        <h3>Components</h3>
+        <a
+          href="https://github.com/boolid/react-blog/tree/main/src/components"
+          target="_blank"
+        >
+          <h3>Components</h3>
+        </a>
         <div>
           I think this might be a react terminology but it's just the building
           block that can be shared across other pages. I think you will
@@ -108,14 +120,84 @@ const BreakDownIntoPieces: React.FC = () => {
         </div>
         <div>
           <b style={{ fontSize: "1.3em" }}>Navigation Bar</b> is the one on the
-          left that helps you to navigate the page.
+          left that helps you to navigate the page. For this website, I have
+          found cool navigation bar tutorial on youtube. If you are interested,
+          please do check it out{" "}
+          <a
+            href="https://www.youtube.com/watch?v=biOMz4puGt8&t=497s&ab_channel=Fireship"
+            target="_blank"
+          >
+            here
+          </a>
         </div>
         <div>
-          <b style={{ fontSize: "1.3em" }}>Cards</b> are used many places in
-          this website. Home Page uses two cards. One for latest project and one
-          for about me. Project List Page also use bunch of card but they will
-          have the same styling.
+          <b style={{ fontSize: "1.3em" }}>Cards</b> are used in many places.
+          Home Page uses two cards. One for latest project and one for about me.
+          Project List Page also use bunch of card but they will have the same
+          styling. For this, I have built my custom cards instead of using
+          others. It's simply because I wanted to learn how CSS works.
         </div>
+        <div>
+          <b style={{ fontSize: "1.3em" }}>Icons</b> are very very important.
+          They are needed everywhere lol!!!! I think the tuorial of how to build
+          navigation bar actually tells you where to get icons. For me, I got
+          the icons from{" "}
+          <a
+            href="https://fontawesome.com/icons?d=gallery&p=2&s=duotone"
+            target="_blank"
+          >
+            Font Awesome
+          </a>{" "}
+          website and use the Duotone.
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const Backend: React.FC = () => {
+  return (
+    <div>
+      <div>
+        In short, I'm not going to create a backend system for now. I do need it
+        eventually but for now, I like to keep this project as simple as
+        possible. This is why I decided to scrap off the like and comment
+        feature that I've added in the planning.
+      </div>
+      <div>
+        However, this just not end here. I still need a server to host this
+        website. I could use raspberry pi to host it at home but who host
+        website at home these days right? I personally love using firebase so
+        I'll host this website{" "}
+        <a href="https://firebase.google.com/firebase" target="_blank">
+          firebase.
+        </a>
+      </div>
+    </div>
+  );
+};
+
+const LessonLearn: React.FC = () => {
+  return (
+    <div>
+      <div>There are few things I've learn while building this website.</div>
+      <div>
+        <h3>1. Learning CSS was very challenging</h3>
+        Learning CSS was fun but still had difficulty learning CSS especially
+        when things doesn't go as plan. I mainly tried to learn how flex-box
+        works.
+      </div>
+      <div>
+        <h3>2. Content writing is very difficult</h3>
+        As I'm trying to write my first page, man... this page took a while to
+        write. Although it seems that there aren't many content inside but it
+        took really really realllllly long to write.
+      </div>
+      <div>
+        <h3>3. I'm lazier than I thought</h3>I was going to write some backend
+        code. You know, typical having database and server that interact with
+        the database. However, I got way too lazy to write that code and decided
+        to strip apart all the things that required backend system.
       </div>
     </div>
   );
@@ -142,6 +224,16 @@ const tableOfContents: TableOfContent[] = [
     id: "break-down-pieces",
     title: "Breaking down into pieces",
     content: <BreakDownIntoPieces />,
+  },
+  {
+    id: "backend",
+    title: "Backend!?!?!",
+    content: <Backend />,
+  },
+  {
+    id: "lesson-learn",
+    title: "Lesson Learn",
+    content: <LessonLearn />,
   },
 ];
 
@@ -170,7 +262,7 @@ const BuildWebsite: React.FC = () => {
         will not talk about how to code a website but it should help you how I
         approach building a website.
       </div>
-      <div>Let's get into it!!!</div>
+      <div>Let's get into it!!! 🚀🚀🚀</div>
 
       {buildTableOfContents()}
 
@@ -182,6 +274,12 @@ const BuildWebsite: React.FC = () => {
           </div>
         );
       })}
+
+      <div>
+        Anyhow... This is my first blog so it won't be as fancy as you will
+        think it is. It might even lack of a lot of content. Please let me know
+        if you have any questions 😁.
+      </div>
     </div>
   );
 };

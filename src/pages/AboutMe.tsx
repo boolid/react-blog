@@ -12,6 +12,10 @@ const AboutMe: React.FC = () => {
     >
       <h1>About Me</h1>
       <div>
+        I don't know why you are reading this page... But if you are reading
+        this page, welcome! I guess you are here to learn a bit more about me.
+      </div>
+      <div>
         <h3>Little bit about me</h3>
         <p>{aboutMeDetails.shortDescription}</p>
       </div>
